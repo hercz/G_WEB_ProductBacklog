@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Default title</title>
+    <title>Login page</title>
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
     <!-- jQuery library -->
@@ -11,9 +11,18 @@
     <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="css/style.css">
 </head>
-<body>
+<body><!--content-->
 
-<!--content-->
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-4 col-sm-offset-4 login-panel">
+                <p>Welcome to the Login page</p>
+                <input type="text" id="username" placeholder="Username" required>
+                <input type="password" id="password" placeholder="Password" required>
+                <input type="submit" id="loginBtn" class="btn btn-md btn-primary" value="Login">
+            </div>
+        </div>
+    </div>
 
 <script type="text/javascript" src="js/main.js"></script>
 </body>
