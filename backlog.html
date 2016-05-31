@@ -9,12 +9,12 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
     <!-- Latest compiled JavaScript -->
     <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-    <link rel="stylesheet" href="css/style.css">
+    <!--<link rel="stylesheet" href="css/style.css">-->
 </head>
 <body>
 <div class="container">
     <h1>Backlog Items</h1>
-    <button type="button" class="btn btn-primary">New Item</button>
+    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">New Item</button>
     <table class="table table-hover">
         <thead>
         <tr>
@@ -44,6 +44,62 @@
         </tbody>
     </table>
 </div>
+
+<!-- Modal -->
+<div id="myModal" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title">Add backlog Item</h4>
+            </div>
+            <div class="modal-body">
+                <form role="form">
+                    <div class="form-group">
+                        <label for="itemId">Id</label>
+                        <h6 id="itemId">23</h6>
+                        <label for="itemName">Backlog Item</label>
+                        <input type="text" class="form-control" id="itemName">
+                    </div>
+                    <div class="form-group">
+                        <label for="itemStatus">Select the status of the Item</label>
+                        <select class="form-control" id="itemStatus">
+                            <option>New</option>
+                            <option>Approved</option>
+                            <option>Commited</option>
+                            <option>Done</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="itemDescription">Description</label>
+                        <textarea class="form-control" rows="4" id="itemDescription">
+                        </textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="itemAcceptanceCriteria">Acceptance Criteria</label>
+                        <textarea class="form-control" rows="4" id="itemAcceptanceCriteria">
+                        </textarea>
+                    </div>
+                    <div class="form-group">
+                        <h5>Details</h5>
+                        <label for="itemPriority">Priority</label>
+                        <input id="itemPriority">
+                        <label for="itemEffort">Effort</label>
+                        <input id="itemEffort">
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Add</button>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+
 <script type="text/javascript" src=""></script>
 </body>
 </html>
