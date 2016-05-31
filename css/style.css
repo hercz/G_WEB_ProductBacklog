@@ -1,4 +1,5 @@
-/*login page*/
+/*login page begin*/
+
 *{
     margin: 0;
     padding: 0;
@@ -16,10 +17,17 @@ body{
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
+.login-panel p{
+    text-align: center;
+    font-size: 15px;
+}
+
 .login-panel input{
     margin-top: 10px;
 }
 
-#loginBtn{
-
+.inputfield{
+    width: 190px;
 }
+
+/*login page end*/
