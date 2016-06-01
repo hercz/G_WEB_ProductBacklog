@@ -1,8 +1,6 @@
-var count= 2;
-function validate()
-{
-    var un = document.login.username.value;
-    var pw = document.login.password.value;
+function validate() {
+    var un = document.getElementById("username").value;
+    var pw = document.getElementById("password").value;
     var valid = false;
 
     var usernames = ["admin", "admin2"];
@@ -16,47 +14,29 @@ function validate()
     var usernames = JSON.parse(retrivedName);
     var passwords = JSON.parse(retrievedPass);
 
-    for (var i = 0; i < usernames.length; i++)
-    {
-        if ((un == usernames[i]) && (pw == passwords[i]))
-        {
+    for (var i = 0; i < usernames.length; i++) {
+        if ((un == usernames[i]) && (pw == passwords[i])) {
             valid = true;
             break;
         }
     }
 
-    if (valid)
-    {
+    if (valid) {
         alert("Login was successful");
-        window.location.href = "test.html";
+        window.location.href = "backlog.html";
         return false;
     }
-    var again = " tries";
-    if (count ==1)
-    {
-        again = " try"
-    }
-    if (count >= 1)
-    {
+    else {
         alert("Wrong password or username")
-        count--;
-    }
-    else
-    {
-        alert("Incorrect password or username you are now blocked");
-        document.login.username.value = "You are now Blocked";
-        document.login.password.value = "Fool you can't see this";
-        document.login.username.disabled = true;
-        document.login.password.disabled = true;
-        return false;
     }
 }
- var loginBtn = document.getElementById("loginBtn");
- var password = document.getElementById("password");
- loginBtn.addEventListener("click", validate);
- password.addEventListener("keyup", function(event){
- var code = event.keyCode;
- if(code === 13){
- validate();
- }})
+var loginBtn = document.getElementById("loginBtn");
+var password = document.getElementById("password");
+loginBtn.addEventListener("click", validate);
+password.addEventListener("keyup", function (event) {
+    var code = event.keyCode;
+    if (code === 13) {
+        validate();
+    }
+});
 
