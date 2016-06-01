@@ -5,8 +5,22 @@
 document.getElementById("addItemButton").addEventListener("click", addItemToTable)
 
 function gennerateId() {
-
+var uniq = 'id' + (new Date()).getTime().toString();
 }
+
+
+var titleLenght = function (text)
+{
+  if (text.length <= 50)
+            {
+                return true;
+            }
+            else
+            {
+              alert("This title very long! Title max lenght 50 characters ")
+              return false;
+            }
+
 
 function addItemToTable() {
 
