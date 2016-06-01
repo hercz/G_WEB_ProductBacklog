@@ -3,11 +3,12 @@ function validate() {
     var pw = document.getElementById("password").value;
     var valid = false;
 
-    var usernames = ["admin", "admin2"];
-    var passwords = ["12345", "45678"];
 
-    localStorage.setItem("username", JSON.stringify(usernames));
-    localStorage.setItem("password", JSON.stringify(passwords));
+    var storedUsernames = ["admin", "admin2"];
+    var storedPasswords = ["12345", "45678"];
+
+    localStorage.setItem("username", JSON.stringify(storedUsernames));
+    localStorage.setItem("password", JSON.stringify(storedPasswords));
 
     var retrivedName = localStorage.getItem("username");
     var retrievedPass = localStorage.getItem("password");
@@ -23,13 +24,18 @@ function validate() {
 
     if (valid) {
         alert("Login was successful");
-        window.location.href = "backlog.html";
+        window.location = "backlog.html";
         return false;
     }
     else {
         alert("Wrong password or username")
     }
 }
+
+window.onload = function () {
+    document.getElementById("username").focus();
+};
+
 var loginBtn = document.getElementById("loginBtn");
 var password = document.getElementById("password");
 loginBtn.addEventListener("click", validate);
